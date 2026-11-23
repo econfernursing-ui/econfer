@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173d68"><meta name="description" content="e-CONFER Electronic Conference for Nursing">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>e-CONFER Nursing</title>
+<style>
+:root{--blue:#173d68;--blue2:#245b91;--bg:#f3f6fa;--card:#fff;--ink:#172b40;--muted:#64748b;--line:#dce4ed;--green:#16835d;--red:#b23a48}*{box-sizing:border-box}body{margin:0;font:15px system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:16px}.hero{background:linear-gradient(120deg,#173d68,#28649a);color:white;border-radius:18px;padding:22px;display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-size:25px;font-weight:850;letter-spacing:.5px}.sub{font-size:12px;color:#d9e7f5}.pill{font-size:11px;background:#ffffff22;padding:7px 10px;border-radius:30px}.profile{margin-top:12px;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px;display:flex;gap:12px;align-items:end;flex-wrap:wrap}.field{flex:1;min-width:160px}.field label{display:block;font-size:12px;font-weight:700;margin:0 0 5px}.field input,.field select,.field textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:9px;background:white;color:var(--ink)}.nav{display:flex;gap:7px;overflow:auto;padding:14px 0}.nav button{white-space:nowrap;border:1px solid var(--line);background:white;color:var(--ink);border-radius:9px;padding:10px 13px;font-size:13px}.nav button.active{background:var(--blue);color:white;border-color:var(--blue)}main{min-height:400px}.page{display:none}.page.active{display:block}.heading{font-size:19px;font-weight:800;margin:8px 0 3px}.muted{font-size:12px;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px}.stat strong{display:block;font-size:27px;margin:4px 0}.layout{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card h3{margin:0 0 8px;font-size:15px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.formgrid .field{min-width:0}.wide{grid-column:1/-1}.btn{border:0;background:var(--blue2);color:white;border-radius:9px;padding:11px 15px;font-weight:700}.btn.light{background:white;color:var(--ink);border:1px solid var(--line)}.btn.red{background:var(--red)}.full{width:100%;margin-top:12px}.record{border:1px solid var(--line);border-radius:11px;padding:12px;margin-top:9px;background:white}.recordhead{display:flex;justify-content:space-between;gap:10px}.tag{font-size:11px;background:#edf3f9;padding:4px 8px;border-radius:20px}.empty{padding:24px;text-align:center;color:var(--muted)}.bar{height:7px;background:#e9eff5;border-radius:9px;overflow:hidden;margin-top:5px}.bar span{display:block;height:100%;background:#3985bb}.notice{background:#edf3f9;padding:11px;border-radius:9px;font-size:12px;margin-top:12px;line-height:1.5}.hidden{display:none!important}button,input,select,textarea{touch-action:manipulation}button{min-height:42px}textarea{resize:vertical;max-width:100%}input,select,textarea{font-size:16px!important}.footer{text-align:center;padding:22px;color:var(--muted);font-size:11px}table{border-collapse:collapse;width:100%;font-size:13px}td,th{text-align:left;padding:9px;border-bottom:1px solid var(--line)}.tablewrap{overflow:auto}.hidden{display:none!important}@media(max-width:650px){.shell{padding:11px}.hero{padding:17px}.brand{font-size:22px}.layout{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:10px}.stat strong{font-size:23px}.formgrid{grid-template-columns:1fr}.wide{grid-column:auto}.profile{align-items:stretch}.field{min-width:100%}.nav{margin-right:-11px;padding-right:11px}}
+.authGate{max-width:460px;margin:28px auto;background:white;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 30px #173d6812}.authGate h2{margin:0 0 5px}.authGate .field{margin-top:12px}.authGate input,.authGate select{width:100%;padding:11px;border:1px solid var(--line);border-radius:9px}.authHint{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.5}.shell:not(.logged-in)>.hero,.shell:not(.logged-in)>.profile,.shell:not(.logged-in)>.nav,.shell:not(.logged-in)>main,.shell:not(.logged-in)>.footer{display:none!important}.shell.logged-in>.authGate{display:none!important}.profile{align-items:center}.logout{margin-left:auto}@media print{body{background:white}.shell>*:not(main),.nav,.no-print{display:none!important}.page{display:block!important}.page:not(#reports){display:none!important}.card,.record{break-inside:avoid}}
+.tablewrap{touch-action:pan-x;overscroll-behavior-x:contain}.patientcase hr{border:0;border-top:1px solid var(--line);margin:16px 0}.bedrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.bedrow .field{min-width:170px}.patientcase input,.patientcase select,.patientcase textarea{min-height:44px}@media(max-width:650px){.nav button{min-height:44px}.card{padding:12px}.formgrid{gap:9px}}
+
+.edit-record-btn{display:inline-flex!important;visibility:visible!important;opacity:1!important;margin:8px 8px 0 0;min-height:42px;align-items:center;justify-content:center;font-weight:700;border:1px solid #4777a8!important;cursor:pointer;position:relative;z-index:2}
+.record .edit-record-btn{pointer-events:auto!important}
+</style></head>
+<body><div class="shell">
+<section class="authGate" id="authGate">
+  <div class="sub" style="color:var(--blue2);font-weight:800">NURSING MANAGEMENT SYSTEM</div>
+  <h2>Login Perawat</h2>
+  <div class="muted">Masuk menggunakan nama perawat dan password tetap.</div>
+  <form id="loginForm">
+    <div class="field"><label>Nama perawat</label><input id="loginName" autocomplete="username" required placeholder="Masukkan nama perawat"></div>
+    <div class="field"><label>Jabatan</label><select id="loginRole"><option>Perawat Pelaksana</option><option>Ketua Tim</option><option>PJ Shift</option><option>Kepala Ruangan</option></select></div>
+    <div class="field"><label>Password</label><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Masukkan password"></div>
+    <button class="btn full" type="submit">Login</button>
+  </form>
+  <div class="authHint">Password tetap untuk semua perawat: <b>Econfer123</b>.</div>
+</section>
+<header class="hero"><div><div class="sub">NURSING MANAGEMENT SYSTEM</div><div class="brand">✚ e-CONFER</div><div class="sub">Electronic Conference for Nursing · Paviliun Firdaus</div></div><div class="pill">PROTOTIPE V1.0</div></header>
+<div id="firebaseStatus" class="notice hidden" role="status" aria-live="polite">Memuat koneksi database…</div>
+<div class="profile no-print"><div class="field"><label>Nama pengguna</label><input id="username" placeholder="Nama perawat"></div><div class="field"><label>Jabatan</label><select id="role"><option>Perawat Pelaksana</option><option>Ketua Tim</option><option>PJ Shift</option><option>Kepala Ruangan</option></select></div><button class="btn" id="install" hidden>Pasang aplikasi</button><button class="btn light logout" id="logout" type="button">Logout</button></div>
+<nav class="nav no-print"><button class="active" data-page="dashboard">⌂ Dashboard Karu</button><button data-page="prepage">Pre-Conference</button><button data-page="postpage">Post-Conference</button><button data-page="evalpre">Evaluasi Pre</button><button data-page="evalpost">Evaluasi Post</button><button data-page="education">Edukasi</button><button data-page="reports">Laporan PDF</button><button data-page="guide">Petunjuk penggunaan</button></nav>
+<main>
+<section class="page active" id="dashboard"><div class="heading">Dashboard</div><div class="muted" id="dateNow"></div><div class="stats"><div class="stat"><span class="muted">Pre-conference</span><strong id="npre">0</strong><span class="muted">Catatan</span></div><div class="stat"><span class="muted">Post-conference</span><strong id="npost">0</strong><span class="muted">Catatan</span></div><div class="stat"><span class="muted">Pembagian tugas</span><strong id="ntask">0</strong><span class="muted">Entri</span></div></div><div class="layout"><div class="card"><h3>Ringkasan aktivitas</h3><div id="summary"></div></div><div class="card"><h3>Akses cepat</h3><div style="display:grid;gap:8px"><button class="btn" data-go="prepage">＋ Buka Pre-Conference</button><button class="btn light" data-go="postpage">Buka Post-Conference</button></div></div></div><div class="card" style="margin-top:12px"><h3>Aktivitas terbaru</h3><div id="recent"></div></div><div class="notice">Gunakan data fiktif untuk demonstrasi. Prototipe ini belum terhubung dengan SIMRS atau rekam medis resmi.</div></section>
+<section class="page" id="prepage"><div class="heading">Pre-Conference</div><div class="muted">Form Pre-Conference tersimpan terpisah.</div><form id="preForm" class="card" style="margin-top:12px"><div class="heading">Identitas Pasien</div><div class="formgrid"><div class="field"><label>Tanggal</label><input name="date" type="date" required></div><div class="field"><label>Shift</label><select name="shift"><option>Pagi</option><option>Siang</option><option>Malam</option></select></div><div class="field"><label>Nama Pasien</label><input name="patientName" required></div><div class="field"><label>Tanggal Lahir</label><input name="dob" type="date"></div><div class="field"><label>Nomor Rekam Medis</label><input name="medicalRecord" required></div><div class="field"><label>Nomor Bed</label><select name="bed" id="preBed" required></select></div><div class="field"><label>Kamar / Ruangan</label><input name="room" required placeholder="Nama kamar / ruangan"></div></div><hr><div class="heading">Isi Pre-Conference</div><div class="formgrid"><div class="field wide"><label>Masalah Keperawatan</label><textarea name="nursingProblem" rows="3"></textarea></div><div class="field wide"><label>Rencana Tindakan Keperawatan</label><textarea name="plan" rows="3"></textarea></div><div class="field wide"><label>Arahan dari Katim</label><textarea name="direction" rows="3" placeholder="Arahan yang diberikan Ketua Tim"></textarea></div></div><button class="btn full" type="submit">Simpan Pre-Conference</button><button class="btn light full hidden" id="preCancel" type="button">Batal Edit</button></form></section>
+<section class="page" id="postpage"><div class="heading">Post-Conference</div><div class="muted">Form Post-Conference terpisah dari Pre-Conference.</div><form id="postForm" class="card" style="margin-top:12px"><div class="heading">Identitas Pasien</div><div class="formgrid"><div class="field"><label>Tanggal</label><input name="date" type="date" required></div><div class="field"><label>Shift</label><select name="shift"><option>Pagi</option><option>Siang</option><option>Malam</option></select></div><div class="field"><label>Nama Pasien</label><input name="patientName" required></div><div class="field"><label>Tanggal Lahir</label><input name="dob" type="date"></div><div class="field"><label>Nomor Rekam Medis</label><input name="medicalRecord" required></div><div class="field"><label>Nomor Bed</label><select name="bed" id="postBed" required></select></div><div class="field"><label>Kamar / Ruangan</label><input name="room" required placeholder="Nama kamar / ruangan"></div></div><hr><div class="heading">Isi Post-Conference</div><div class="formgrid"><div class="field wide"><label>Tindakan yang Telah Dilakukan</label><textarea name="actions" rows="3"></textarea></div><div class="field wide"><label>Respons / Perkembangan Pasien</label><textarea name="response" rows="3"></textarea></div><div class="field"><label>Hasil Evaluasi Post</label><select name="postEvaluation"><option value="">Pilih hasil</option><option>Tercapai</option><option>Tercapai sebagian</option><option>Belum tercapai</option><option>Perlu tindak lanjut</option></select></div><div class="field wide"><label>Kendala</label><textarea name="obstacles" rows="2"></textarea></div><div class="field wide"><label>Tindak Lanjut</label><textarea name="followup" rows="2"></textarea></div></div><button class="btn full" type="submit">Simpan Post-Conference</button><button class="btn light full hidden" id="postCancel" type="button">Batal Edit</button></form></section>
+<section class="page" id="evalpre"><div class="heading">Evaluasi Pre-Conference</div><div class="muted">Halaman evaluasi Pre-Conference saja. Catatan dapat dibuka dan diedit.</div><div class="card" style="margin-top:12px"><div class="field"><label>Pencarian Pre</label><input id="searchPre" placeholder="Nama, RM, bed, tanggal"></div><div id="preHistoryList"></div></div></section>
+<section class="page" id="evalpost"><div class="heading">Evaluasi Post-Conference</div><div class="muted">Halaman evaluasi Post-Conference saja. Catatan dapat dibuka dan diedit.</div><div class="card" style="margin-top:12px"><div class="field"><label>Pencarian Post</label><input id="searchPost" placeholder="Nama, RM, bed, tanggal"></div><div id="postHistoryList"></div></div></section>
+<section class="page" id="education">
+ <div class="heading">Materi Edukasi Pre-conference & Post-conference</div>
+ <div class="muted">Panduan belajar mandiri untuk perawat tentang konferensi keperawatan sebelum dan sesudah dinas.</div>
+ <div class="card" style="margin-top:12px">
+  <h3>1. Konsep konferensi keperawatan</h3>
+  <p><b>Conference keperawatan</b> adalah komunikasi terstruktur antarperawat dalam satu tim untuk menyamakan informasi, merencanakan pelayanan, mengevaluasi tindakan, dan menjaga kesinambungan asuhan. Conference harus berlangsung singkat, terarah, berfokus pada kebutuhan pasien, serta menjaga kerahasiaan informasi.</p>
+  <p><b>Pre-conference</b> dilakukan sebelum pelaksanaan asuhan pada shift berjalan untuk menyampaikan informasi penting, menetapkan prioritas, dan menyepakati rencana kerja.</p>
+  <p><b>Post-conference</b> dilakukan setelah pelaksanaan asuhan atau menjelang akhir shift untuk meninjau tindakan yang sudah dilakukan, respons pasien, masalah yang belum selesai, dan rencana tindak lanjut/serah terima kepada shift berikutnya.</p>
+  <div class="notice"><b>Catatan:</b> Waktu, peserta, dan prosedur konferensi mengikuti SOP rumah sakit/unit. Materi ini adalah edukasi umum dan bukan pengganti kebijakan atau dokumentasi resmi.</div>
+ </div>
+ <div class="layout" style="margin-top:12px">
+  <div class="card"><h3>2. Pre-conference — tujuan</h3>
+   <ul><li>Menyamakan pemahaman tim tentang kondisi dan kebutuhan pasien.</li><li>Menentukan prioritas masalah dan risiko keselamatan.</li><li>Membagi tugas secara jelas sesuai kompetensi, beban kerja, dan kebutuhan pasien.</li><li>Menyiapkan rencana tindakan, observasi, komunikasi, dan edukasi.</li><li>Mengantisipasi kendala serta kebutuhan kolaborasi.</li></ul>
+  </div>
+  <div class="card"><h3>3. Pre-conference — persiapan</h3>
+   <ul><li>Ketua tim/PJ shift meninjau informasi pasien dan rencana asuhan yang relevan.</li><li>Siapkan ringkasan kondisi, perubahan klinis, risiko, kebutuhan khusus, dan rencana hari/shift tersebut.</li><li>Pastikan anggota tim hadir atau mengetahui instruksi dan pembagian tugas.</li><li>Gunakan tempat yang menjaga privasi; hindari menyebut identitas pasien di area publik.</li></ul>
+  </div>
+ </div>
+ <div class="card" style="margin-top:12px"><h3>4. Alur pelaksanaan Pre-conference</h3>
+  <ol><li><b>Pembukaan:</b> ketua tim/PJ shift membuka konferensi dan menjelaskan fokus shift.</li><li><b>Ringkasan pasien:</b> sampaikan kondisi terkini, perubahan penting, kebutuhan, dan risiko secara singkat serta relevan.</li><li><b>Penetapan prioritas:</b> diskusikan pasien/masalah yang membutuhkan perhatian segera, pemantauan ketat, atau koordinasi.</li><li><b>Rencana asuhan:</b> sepakati tindakan, observasi, edukasi, kolaborasi, dan target yang perlu dicapai.</li><li><b>Pembagian tugas:</b> tetapkan penanggung jawab dan tugas dengan jelas sesuai kompetensi serta kondisi unit.</li><li><b>Konfirmasi:</b> anggota tim mengulang atau mengklarifikasi tugas/instruksi yang belum jelas.</li><li><b>Penutup:</b> pastikan kesiapan tim dan mulai pelayanan sesuai rencana serta SOP.</li></ol>
+ </div>
+ <div class="card" style="margin-top:12px"><h3>5. Checklist Pre-conference</h3>
+  <ul><li>Informasi kondisi pasien dan perubahan klinis sudah disampaikan secara relevan.</li><li>Prioritas masalah dan risiko keselamatan sudah disepakati.</li><li>Rencana tindakan, pemantauan, dan edukasi sudah dibahas.</li><li>Pembagian tugas dan penanggung jawab sudah jelas.</li><li>Kebutuhan alat, obat, atau kolaborasi sudah diidentifikasi sesuai prosedur.</li><li>Anggota tim memahami tugas dan kesempatan bertanya diberikan.</li></ul>
+ </div>
+ <div class="card" style="margin-top:12px">
+  <h3>6. Post-conference — tujuan</h3>
+  <ul><li>Meninjau pelaksanaan asuhan selama shift.</li><li>Membandingkan hasil dengan target atau rencana yang telah ditetapkan.</li><li>Mengidentifikasi respons pasien, tindakan yang belum selesai, dan hambatan.</li><li>Mengevaluasi koordinasi, komunikasi, dan kebutuhan perbaikan.</li><li>Menyiapkan tindak lanjut dan informasi penting untuk shift berikutnya.</li></ul>
+ </div>
+ <div class="layout" style="margin-top:12px">
+  <div class="card"><h3>7. Hal yang dibahas dalam Post-conference</h3><ul><li>Intervensi keperawatan yang telah dilaksanakan.</li><li>Respons dan perubahan kondisi pasien.</li><li>Hasil: tercapai, tercapai sebagian, atau belum tercapai; berdasarkan indikator/target yang digunakan.</li><li>Masalah, kejadian, hambatan, atau tindakan yang tertunda.</li><li>Kolaborasi dengan profesi lain dan tindak lanjut.</li><li>Hal yang perlu disampaikan pada shift berikutnya.</li></ul></div>
+  <div class="card"><h3>8. Sikap saat conference</h3><ul><li>Komunikasi singkat, jelas, faktual, dan saling menghargai.</li><li>Hindari menyalahkan individu; fokus pada keselamatan dan perbaikan sistem.</li><li>Berikan kesempatan anggota tim menyampaikan kondisi atau hambatan.</li><li>Jaga kerahasiaan dan gunakan informasi pasien seperlunya.</li><li>Jika ada kondisi pasien memburuk atau emergensi, lakukan respons segera sesuai prosedur; jangan menunggu conference.</li></ul></div>
+ </div>
+ <div class="card" style="margin-top:12px"><h3>9. Alur pelaksanaan Post-conference</h3>
+  <ol><li><b>Pembukaan:</b> ketua tim memimpin evaluasi shift secara terarah.</li><li><b>Tinjau tindakan:</b> anggota melaporkan tindakan keperawatan dan pemantauan yang dilakukan.</li><li><b>Evaluasi respons:</b> sampaikan respons pasien dan pencapaian target berdasarkan data/observasi.</li><li><b>Identifikasi kendala:</b> bahas hambatan, tindakan tertunda, risiko, dan kebutuhan koordinasi.</li><li><b>Tentukan tindak lanjut:</b> sepakati hal yang harus diteruskan, dipantau, atau dikomunikasikan ke shift berikutnya.</li><li><b>Penutup:</b> konfirmasi informasi penting telah disampaikan dan dokumentasi resmi dilengkapi sesuai SOP.</li></ol>
+ </div>
+ <div class="card" style="margin-top:12px"><h3>10. Checklist Post-conference</h3>
+  <ul><li>Tindakan yang sudah dilakukan telah direview.</li><li>Respons/perkembangan pasien disampaikan berdasarkan data dan observasi.</li><li>Target atau hasil asuhan dievaluasi.</li><li>Kendala dan tindakan yang belum selesai diidentifikasi.</li><li>Rencana tindak lanjut dan informasi serah terima ditentukan.</li><li>Dokumentasi resmi dilengkapi sesuai ketentuan unit.</li></ul>
+ </div>
+ <div class="card" style="margin-top:12px"><h3>11. Komunikasi terstruktur menggunakan SBAR</h3>
+  <p>SBAR dapat membantu menyampaikan informasi penting secara sistematis, khususnya saat melaporkan perubahan kondisi atau melakukan komunikasi klinis sesuai kebijakan fasilitas.</p>
+  <ul><li><b>S — Situation (Situasi):</b> apa kondisi/masalah utama saat ini?</li><li><b>B — Background (Latar belakang):</b> informasi klinis relevan yang membantu memahami situasi.</li><li><b>A — Assessment (Penilaian):</b> temuan, penilaian keperawatan, atau kekhawatiran saat ini.</li><li><b>R — Recommendation (Rekomendasi):</b> apa yang diperlukan/diusulkan, termasuk pemantauan atau eskalasi.</li></ul>
+  <div class="notice">Gunakan SBAR sesuai kebutuhan dan SOP. Untuk kondisi gawat atau perubahan akut, segera lakukan eskalasi melalui jalur respons klinis yang berlaku.</div>
+ </div>
+ <div class="card" style="margin-top:12px"><h3>12. Video pembelajaran</h3>
+  <p class="muted">Tautan berikut membuka hasil pencarian YouTube dengan topik terkait. Video spesifik belum diverifikasi, sehingga pilih video dari sumber edukasi/tenaga kesehatan yang kredibel dan sesuai SOP rumah sakit.</p>
+  <p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=pre+conference+keperawatan+perawat">▶ Video: Pre-conference keperawatan</a></p>
+  <p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=post+conference+keperawatan+perawat">▶ Video: Post-conference keperawatan</a></p>
+  <p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=SBAR+komunikasi+perawat">▶ Video: Komunikasi SBAR untuk perawat</a></p>
+  <p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=handover+keperawatan+keselamatan+pasien">▶ Video: Handover dan keselamatan pasien</a></p>
+ </div>
+ <div class="card" style="margin-top:12px"><h3>13. Ringkasan untuk diingat</h3><p><b>Pre-conference = rencanakan sebelum pelayanan.</b> Samakan informasi, prioritas, rencana, dan pembagian tugas.</p><p><b>Post-conference = evaluasi setelah pelayanan.</b> Tinjau tindakan, respons, target, hambatan, dan tindak lanjut.</p><p>Conference yang efektif bersifat terstruktur, singkat, berfokus pada pasien, aman, menjaga privasi, serta mendukung komunikasi dan kesinambungan asuhan.</p></div>
+</section>
+<section class="page" id="reports"><div class="heading">Laporan PDF</div><div class="muted">Cetak laporan berdasarkan jenis kegiatan dan rentang tanggal.</div><div class="card" style="margin-top:12px"><div class="formgrid"><div class="field"><label>Jenis laporan</label><select id="rtype"><option value="all">Semua kegiatan</option><option value="pre">Pre-conference</option><option value="post">Post-conference</option><option value="task">Pembagian tugas</option></select></div><div class="field"><label>Dari tanggal</label><input id="from" type="date"></div><div class="field"><label>Sampai tanggal</label><input id="to" type="date"></div></div><p id="preview" class="muted"></p><button class="btn full" id="print">Cetak / Simpan sebagai PDF</button><div class="notice">Pada jendela cetak, pilih tujuan printer “Save as PDF / Simpan sebagai PDF”.</div></div></section>
+ <section class="page" id="guide">
+   <div class="heading">Petunjuk penggunaan aplikasi</div>
+   <div class="muted">Panduan singkat menggunakan e-CONFER Nursing.</div>
+   <div class="card" style="margin-top:12px">
+     <h3>1. Login ke aplikasi</h3>
+     <ol>
+       <li>Masukkan nama perawat.</li>
+       <li>Pilih jabatan sesuai tugas.</li>
+       <li>Masukkan password yang diberikan oleh pengelola aplikasi, lalu tekan <b>Login</b>.</li>
+     </ol>
+     <h3>2. Dashboard Karu</h3>
+     <p>Dashboard menampilkan jumlah catatan Pre-conference dan Post-conference serta aktivitas terbaru.</p>
+     <h3>3. Pre-Conference dan Post-Conference</h3>
+     <ol>
+       <li>Buka menu <b>Pre-Conference</b> untuk mengisi identitas, nomor RM, bed, kamar, masalah keperawatan, rencana, dan arahan dari Katim.</li>
+       <li>Buka menu <b>Post-Conference</b> secara terpisah, isi identitas pasien yang sama, tindakan, respons, evaluasi, kendala, dan tindak lanjut.</li>
+       <li>Gunakan menu <b>Evaluasi Pre</b> dan <b>Evaluasi Post</b> yang berada di halaman berbeda untuk mencari dan mengedit catatan masing-masing.</li>
+     </ol>
+     <h3>4. Evaluasi terpisah</h3>
+     <p>Evaluasi Pre dan Evaluasi Post berada di halaman berbeda. Gunakan tombol edit pada catatan untuk memperbaiki data.</p>
+     <h3>5. Edukasi</h3><p>Menu Edukasi berisi materi belajar mandiri mengenai Pre-Conference, Post-Conference, checklist, komunikasi SBAR, dan tautan video pembelajaran.</p>
+     <h3>5. Membuat laporan PDF</h3>
+     <ol>
+       <li>Buka menu <b>Laporan PDF</b>.</li>
+       <li>Pilih jenis laporan dan rentang tanggal jika diperlukan.</li>
+       <li>Tekan <b>Cetak / Simpan sebagai PDF</b>, lalu pilih <b>Save as PDF / Simpan sebagai PDF</b> pada jendela cetak.</li>
+     </ol>
+     <h3>6. Menghapus catatan</h3>
+     <p>Gunakan tombol <b>Hapus</b> pada catatan yang ingin dihapus, kemudian konfirmasi. Penghapusan dilakukan pada database online sehingga catatan tersebut juga tidak akan tampil pada perangkat lain.</p>
+     <h3>7. Mengakses dari perangkat lain</h3>
+     <p>Gunakan alamat aplikasi yang sama pada perangkat lain dan pastikan perangkat terhubung ke internet. Data yang tersimpan di Firebase Firestore akan ditampilkan melalui sinkronisasi realtime. Untuk menjaga aplikasi tetap ringan di HP, versi ini memuat data terbaru.</p>
+     <h3>8. Logout dan memasang aplikasi</h3>
+     <p>Tekan <b>Logout</b> untuk keluar. Jika tombol <b>Pasang aplikasi</b> tersedia, tekan tombol tersebut untuk memasang e-CONFER pada perangkat. Jika tidak tersedia, gunakan menu browser dan pilih <b>Tambahkan ke Layar Utama / Install app</b>.</p>
+     <div class="notice">Catatan: Pastikan koneksi internet aktif saat menyimpan atau membaca data. Gunakan data demonstrasi dan jangan memasukkan identitas atau informasi rahasia pasien. Akses lintas perangkat bergantung pada konfigurasi dan aturan keamanan Firebase Firestore.</div>
+   </div>
+ </section>
+
+</main><footer class="footer">e-CONFER Nursing · Prototipe demonstrasi · Penyimpanan online Firebase Firestore</footer></div>
+<script>
+(()=>{
+  const shell=document.querySelector('.shell');
+  const loginForm=document.getElementById('loginForm');
+  const username=document.getElementById('username');
+  const role=document.getElementById('role');
+  const PASSWORD='Econfer123';
+  function enter(name,job){
+    username.value=name; role.value=job; username.readOnly=true; role.disabled=true;
+    shell.classList.add('logged-in');
+    sessionStorage.setItem('econfer_logged_user',JSON.stringify({name,role:job}));
+  }
+  loginForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    const name=document.getElementById('loginName').value.trim();
+    const job=document.getElementById('loginRole').value;
+    const password=document.getElementById('loginPassword').value;
+    if(password!==PASSWORD){alert('Password salah. Silakan coba lagi.');return;}
+    if(!name){alert('Masukkan nama perawat.');return;}
+    enter(name,job); loginForm.reset();
+  });
+  document.getElementById('logout').addEventListener('click',()=>{
+    sessionStorage.removeItem('econfer_logged_user'); shell.classList.remove('logged-in');
+    username.readOnly=false; role.disabled=false; loginForm.reset();
+    document.getElementById('loginName').focus();
+  });
+  try{const active=JSON.parse(sessionStorage.getItem('econfer_logged_user')||'null');
+    if(active&&active.name&&active.role)enter(active.name,active.role);
+  }catch(e){}
+})();
+</script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import {
+  getFirestore, collection, addDoc, onSnapshot, deleteDoc, doc, updateDoc
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBj9Bpp70vK0HqU6g7HfmZML70KFLtqllM",
+  authDomain: "e-confer-nursing-bdd02.firebaseapp.com",
+  projectId: "e-confer-nursing-bdd02",
+  storageBucket: "e-confer-nursing-bdd02.firebasestorage.app",
+  messagingSenderId: "138361125577",
+  appId: "1:138361125577:web:54d84549e64c76a8cbab18",
+  measurementId: "G-F8DPCT99SG"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const recordsRef = collection(db, "econfer_records");
+const recordsQuery = recordsRef;
+const $ = id => document.getElementById(id);
+let data = [];
+let editingPreId=null, editingPostId=null;
+
+const today = () => {
+  const d = new Date();
+  return [d.getFullYear(), String(d.getMonth()+1).padStart(2,"0"), String(d.getDate()).padStart(2,"0")].join("-");
+};
+const fmt = s => s ? s.split("-").reverse().join("/") : "-";
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+}[c]));
+const type = t => t === "patientcase" ? "Konferensi per Pasien" : t === "pre" ? "Pre-conference" : t === "post" ? "Post-conference" : "Pembagian tugas";
+
+function go(id) {
+  document.querySelectorAll(".page").forEach(p => p.classList.toggle("active", p.id === id));
+  document.querySelectorAll(".nav button").forEach(b => b.classList.toggle("active", b.dataset.page === id));
+  render();
+}
+document.querySelectorAll("[data-page]").forEach(b => b.onclick = () => go(b.dataset.page));
+document.querySelectorAll("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
+
+function fields(r) {
+ if(r.type==="pre") return [["Tanggal",r.date],["Shift",r.shift],["Nama Pasien",r.patientName],["Tanggal Lahir",r.dob],["No. RM",r.medicalRecord],["Bed",r.bed],["Kamar",r.room],["Masalah Keperawatan",r.nursingProblem],["Rencana Tindakan",r.plan],["Arahan dari Katim",r.direction]];
+ if(r.type==="post") return [["Tanggal",r.date],["Shift",r.shift],["Nama Pasien",r.patientName],["Tanggal Lahir",r.dob],["No. RM",r.medicalRecord],["Bed",r.bed],["Kamar",r.room],["Tindakan",r.actions],["Respons",r.response],["Evaluasi Post",r.postEvaluation],["Kendala",r.obstacles],["Tindak Lanjut",r.followup]];
+ if(r.type==="patientcase") return [["Tanggal",r.date],["Shift",r.shift],["Bed",r.bed],["Nama Pasien",r.patientName],["Tanggal Lahir",r.dob],["Ketua tim",r.leader],["Pre",r.preCondition],["Post",r.postResult],["Evaluasi Tugas",r.taskEvaluation]];
+ return [["Perawat",r.nurse],["Ruang",r.room],["Tugas",r.duty]];
+}
+
+function record(r) {
+  return `<article class="record">
+    <div class="recordhead"><div><b>${type(r.type)}</b><div class="muted">${fmt(r.date)} · Shift ${esc(r.shift)}</div></div><span class="tag">${esc(r.author)}</span></div>
+    <div class="muted" style="margin:7px 0">PJ: ${esc(r.leader || "-")}</div>
+    ${fields(r).filter(x=>x[1]).map(x=>`<p style="margin:7px 0;white-space:pre-wrap"><b>${x[0]}:</b> ${esc(x[1])}</p>`).join("")}
+    ${r.type==="pre"?`<button class="btn light edit-record-btn" data-editpre="${esc(r.id)}">✏️ Edit Pre-Conference</button>`:r.type==="post"?`<button class="btn light edit-record-btn" data-editpost="${esc(r.id)}">✏️ Edit Post-Conference</button>`:""}
+    <button class="btn red" style="padding:7px 10px;font-size:12px" data-del="${esc(r.id)}">Hapus</button>
+  </article>`;
+}
+
+async function saveForm(form, t) {
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const button = form.querySelector('button[type="submit"], button:not([type])');
+    if (button) button.disabled = true;
+    try {
+      const o = {
+        type: t,
+        author: $("username").value.trim() || "Pengguna",
+        role: $("role").value,
+        created: new Date().toISOString()
+      };
+      new FormData(form).forEach((v,k) => o[k] = v);
+      await addDoc(recordsRef, o);
+      form.reset();
+      form.querySelector('[type="date"]').value = today();
+      alert("Catatan berhasil dikirim dan disimpan di Firebase Firestore.");
+    } catch (err) {
+      console.error(err);
+      alert("Gagal menyimpan ke Firebase: " + (err.code || err.message) + "\nPeriksa koneksi internet dan Firestore Rules.");
+    } finally {
+      if (button) button.disabled = false;
+    }
+  });
+}
+const bedMap=["Dirgantara D-1","Dirgantara D-2",...Array.from({length:16},(_,i)=>[`Buana B ${i+1}.1`,`Buana B ${i+1}.2`]).flat(),"VVIP - 1 bed"];
+function fillBeds(sel){sel.innerHTML='<option value="">Pilih bed</option>';bedMap.forEach(b=>{const o=document.createElement("option");o.value=b;o.textContent=b;sel.appendChild(o);});}
+fillBeds($("preBed"));fillBeds($("postBed"));
+function editRecordForm(r,form,kind){Object.entries(r).forEach(([k,v])=>{const el=form.elements.namedItem(k);if(el&&"value" in el)el.value=v??"";});if(kind==="pre"){editingPreId=r.id;$('preCancel').classList.remove('hidden');$('preForm').querySelector('button[type="submit"]').textContent="Simpan Perubahan Pre";go('prepage');}else{editingPostId=r.id;$('postCancel').classList.remove('hidden');$('postForm').querySelector('button[type="submit"]').textContent="Simpan Perubahan Post";go('postpage');}form.scrollIntoView({behavior:"smooth",block:"start"});}
+function resetEdit(kind){const f=$(kind+"Form");f.reset();f.querySelector('[type="date"]').value=today();if(kind==="pre"){editingPreId=null;$('preCancel').classList.add('hidden');f.querySelector('button[type="submit"]').textContent="Simpan Pre-Conference";}else{editingPostId=null;$('postCancel').classList.add('hidden');f.querySelector('button[type="submit"]').textContent="Simpan Post-Conference";}}
+$('preCancel').onclick=()=>resetEdit('pre');$('postCancel').onclick=()=>resetEdit('post');
+async function handleSeparateForm(form,kind){form.addEventListener('submit',async e=>{e.preventDefault();const btn=form.querySelector('button[type="submit"]');btn.disabled=true;try{const o={type:kind,author:$('username').value.trim()||"Pengguna",role:$('role').value,created:new Date().toISOString()};new FormData(form).forEach((v,k)=>o[k]=v);const editing=kind==='pre'?editingPreId:editingPostId;if(editing){o.updated=new Date().toISOString();await updateDoc(doc(db,"econfer_records",editing),o);alert(kind==='pre'?"Pre-Conference berhasil diperbarui.":"Post-Conference berhasil diperbarui.");}else{await addDoc(recordsRef,o);alert(kind==='pre'?"Pre-Conference tersimpan.":"Post-Conference tersimpan.");}resetEdit(kind);}catch(err){console.error(err);alert("Gagal menyimpan ke Firebase: "+(err.code||err.message));}finally{btn.disabled=false;}});}
+handleSeparateForm($('preForm'),'pre');handleSeparateForm($('postForm'),'post');
+async function removeRecord(id) {
+  if (!confirm("Hapus catatan ini dari database online?")) return;
+  try {
+    await deleteDoc(doc(db, "econfer_records", id));
+  } catch (err) {
+    console.error(err);
+    alert("Gagal menghapus data Firebase: " + (err.code || err.message));
+  }
+}
+
+function bindDelete() {
+  document.querySelectorAll("[data-del]").forEach(b => b.onclick = () => removeRecord(b.dataset.del));
+  document.querySelectorAll("[data-editpre]").forEach(b=>b.onclick=()=>editRecordForm(data.find(r=>r.id===b.dataset.editpre),$('preForm'),'pre'));
+  document.querySelectorAll("[data-editpost]").forEach(b=>b.onclick=()=>editRecordForm(data.find(r=>r.id===b.dataset.editpost),$('postForm'),'post'));
+}
+function filtered() {
+  const f = $("rtype").value, from = $("from").value, to = $("to").value;
+  return data.filter(r => (f === "all" || r.type === f) && (!from || r.date >= from) && (!to || r.date <= to));
+}
+
+function renderBedBoard(){ /* legacy bed board removed: evaluation list is separated by Pre/Post records */ }
+
+function render() {
+
+  const pre = data.filter(r=>r.type==="pre" || (r.type==="patientcase" && [r.preCondition,r.prePriority,r.prePlan,r.preNotes].some(v=>String(v||"").trim()))), post = data.filter(r=>r.type==="post" || (r.type==="patientcase" && [r.postActions,r.postResponse,r.postResult,r.postObstacles,r.postFollowup].some(v=>String(v||"").trim()))), tasks = data.filter(r=>r.type==="task" || (r.type==="patientcase" && [r.taskNurse,r.taskEvaluation,r.taskNotes].some(v=>String(v||"").trim())));
+  $("dateNow").textContent = "Tanggal: " + fmt(today());
+  $("npre").textContent = pre.length; $("npost").textContent = post.length; $("ntask").textContent = tasks.length;
+  $("summary").innerHTML = [["Pre-conference",pre.length],["Post-conference",post.length],["Pembagian tugas",tasks.length]]
+    .map(x=>`<div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><span>${x[0]}</span><b>${x[1]}</b></div><div class="bar"><span style="width:${data.length?x[1]/data.length*100:0}%"></span></div></div>`).join("");
+  $("recent").innerHTML = data.length
+    ? data.slice(0,4).map(r=>`<div class="record"><b>${type(r.type)}</b><div class="muted">${fmt(r.date)} · ${esc(r.shift)} · ${esc(r.author)}</div></div>`).join("")
+    : '<div class="empty">Belum ada aktivitas. Tambahkan catatan pertama.</div>';
+  const qp=$("searchPre").value.toLowerCase(), qo=$("searchPost").value.toLowerCase();
+  const hp=data.filter(r=>r.type==="pre" && JSON.stringify(r).toLowerCase().includes(qp));
+  const ho=data.filter(r=>r.type==="post" && JSON.stringify(r).toLowerCase().includes(qo));
+  $("preHistoryList").innerHTML=hp.length?hp.map(record).join(""):'<div class="empty">Belum ada catatan Pre-Conference.</div>';
+  $("postHistoryList").innerHTML=ho.length?ho.map(record).join(""):'<div class="empty">Belum ada catatan Post-Conference.</div>';
+  const a=filtered();
+  $("preview").textContent = `${a.length} catatan ditemukan · Pre: ${a.filter(r=>r.type==="pre").length} · Post: ${a.filter(r=>r.type==="post").length} · Tugas: ${a.filter(r=>r.type==="task").length}`;
+  bindDelete();
+}
+["searchPre","searchPost","rtype","from","to"].forEach(id => $(id).addEventListener("input",render));
+
+$("print").onclick = () => {
+  const a=filtered(), w=window.open("","_blank");
+  if(!w){alert("Izinkan pop-up untuk mencetak laporan.");return;}
+  const body=a.map(r=>`<article><h3>${type(r.type)} · ${fmt(r.date)} · Shift ${esc(r.shift)}</h3><p>PJ: ${esc(r.leader||"-")} | Pencatat: ${esc(r.author)}</p>${fields(r).filter(x=>x[1]).map(x=>`<p><b>${x[0]}:</b> ${esc(x[1])}</p>`).join("")}</article>`).join("");
+  w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>Laporan e-CONFER</title><style>body{font:12px Arial;margin:28px;color:#172b40}article{border:1px solid #bbb;padding:12px;margin:12px 0;break-inside:avoid}p{white-space:pre-wrap;line-height:1.5}.tablewrap{touch-action:pan-x;overscroll-behavior-x:contain}.patientcase hr{border:0;border-top:1px solid var(--line);margin:16px 0}.bedrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.bedrow .field{min-width:170px}.patientcase input,.patientcase select,.patientcase textarea{min-height:44px}@media(max-width:650px){.nav button{min-height:44px}.card{padding:12px}.formgrid{gap:9px}}
+</style></head><body><h1>LAPORAN e-CONFER NURSING</h1><h3>Paviliun Firdaus · RSAU dr. M. Salamun</h3><p>Dicetak ${new Date().toLocaleString("id-ID")} · ${a.length} catatan</p>${body||"Tidak ada data."}<p>Dokumen prototipe demonstrasi, bukan rekam medis resmi.</p><script>window.onload=()=>window.print()<\/script></body></html>`);
+  w.document.close();
+};
+
+document.querySelectorAll('form input[type="date"]').forEach(x=>x.value=today());
+$("dateNow").textContent = "Tanggal: " + fmt(today());
+render();
+
+// Realtime listener: dashboard dan riwayat mengikuti perubahan dari perangkat lain.
+onSnapshot(recordsQuery, snapshot => {
+  const status=document.getElementById("firebaseStatus"); if(status){status.textContent="Database terhubung. Data terbaru dimuat dari seluruh catatan yang tersedia."; status.classList.remove("hidden");}
+  data = snapshot.docs.map(d => ({...d.data(), id:d.id}))
+    .sort((a,b) => String(b.created||"").localeCompare(String(a.created||"")));
+  render();
+}, err => {
+  console.error(err);
+  const status=document.getElementById("firebaseStatus");
+  if(status){status.textContent="Koneksi database belum berhasil. Menu formulir tetap bisa dibuka, tetapi riwayat dan penyimpanan online belum berfungsi. Periksa internet atau Firebase."; status.classList.remove("hidden");}
+});
+
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  navigator.serviceWorker.register("./sw.js").catch(()=>{});
+}
+let deferred;
+$("install").hidden=true;
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferred=e;$("install").hidden=false;});
+$("install").onclick=async()=>{
+  if(deferred){deferred.prompt();await deferred.userChoice;deferred=null;$("install").hidden=true;}
+  else alert("Gunakan menu browser lalu pilih Tambahkan ke Layar Utama / Install app.");
+};
+</script>
+</body></html>
